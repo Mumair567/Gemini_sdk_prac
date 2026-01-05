@@ -23,6 +23,7 @@ class SignUp(BaseModel):
     @classmethod
     def password_validator(cls,value):
         invalid_password=["password","12345678"]
+        
         if value.lower() in invalid_password:
             raise ValueError(" Password is too common")
         return value
